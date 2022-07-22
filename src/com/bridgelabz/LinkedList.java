@@ -41,4 +41,18 @@ public class LinkedList {
         }
         size += 1;
     }
+
+    //Add elements from tail side  
+    public void addLast(int val) {
+        if (tail == null) {
+            addFirst(val);
+            return;
+        }
+        Node node = new Node(val);
+        tail.next = node;
+        tail = node;
+        size++;
+    }
+
+    
 }
