@@ -79,5 +79,37 @@ public class LinkedList {
         temp.next = node;
         size++;
     }
+
+    //Delete First element of linked List    
+    public int deleteFirst() {
+        int val = head.value;
+        head = head.next;
+        if (head == null) {
+            tail = null;
+        }
+        size--;
+        return val;
+    }
     
+    //Get node from Index Value    
+    public Node get(int index) {
+        Node node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node;
+    }
+    
+    //Delete last element of linked List 
+    public int deleteLast() {
+        if (size <= 1) {
+            return deleteFirst();
+        }
+        Node secondLast = get(size - 2);
+        int val = tail.value;
+        tail = secondLast;
+        tail.next = null;
+        size--;
+        return val;
+    }
 }
