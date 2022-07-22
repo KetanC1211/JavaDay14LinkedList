@@ -1,0 +1,2 @@
+module JavaDay14LinkedList {
+}
