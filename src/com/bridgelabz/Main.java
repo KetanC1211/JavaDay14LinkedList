@@ -8,6 +8,6 @@ public class Main {
 		list.addFirst(30);
 		list.addFirst(56);
 		list.display();
-		list.find(30);
+		list.findIndex(30);
 	}
 }

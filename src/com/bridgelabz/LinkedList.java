@@ -113,18 +113,17 @@ public class LinkedList {
         return val;
     }
 
-    //Finding element in linked list and returing its index   
-    public Node find(int value) {
+    //Finding index of given Value   
+    public int findIndex(int value) {
         Node node = head;
         int index=0;
         while (node != null) {
             if (node.value == value) {
+            	index++;
                 System.out.println(value+" is on "+index+" index");
-                return node;
             }
-            index++;
             node = node.next;
         }
-        return null;
+        return index;
     }
 }
