@@ -126,4 +126,31 @@ public class LinkedList {
         }
         return index;
     }
+
+    //Insert a given value after particular value
+    public void insertAfterGivenValue(int givenValue ,int value) {
+        int index = findIndex(value);
+        insertValAtIndex(givenValue,index+1);  	
+    }
+
+    public int deleteIndex(int index) {
+        if (index == 0) {
+            return deleteFirst();
+        }
+        if (index == size - 1) {
+            return deleteLast();
+        }
+
+        Node prev = get(index - 1);
+        int val = prev.next.value;
+
+        prev.next = prev.next.next;
+        size--;
+        return val;
+    }
+    
+    //Display Size of linked List
+    public void displaySize() {
+    	System.out.println("Size of list is "+size);
+    }
 }
