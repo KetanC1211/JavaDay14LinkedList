@@ -10,8 +10,6 @@ public class Main {
 		list.display();
 		list.insertAfterGivenValue(40, 30);
 		list.display();
-		list.deleteIndex(list.findIndex(40));
-		list.display();
-		list.displaySize();
+		
 	}
 }
